@@ -34,7 +34,7 @@ const FinalCTA: React.FC = () => {
                 </p>
                 <div className="block my-1 ">
                     <Link href="/auth/login">
-                        <button className="bg-white border-3 border-white text-nve-red font-medium py-4 px-6 rounded-lg hover:bg-nve-red hover:text-white transition duration-400 ease-out-in cursor-pointer">
+                        <button className="btn btn-primary-invert">
                             Đăng ký ngay
                         </button>
                     </Link>

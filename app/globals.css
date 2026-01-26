@@ -38,3 +38,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
+
+@utility btn {
+  @apply font-medium py-4 px-6 rounded-lg transition duration-400 ease-in-out cursor-pointer border-3;
+}
+
+@utility btn-primary {
+  @apply bg-nve-red border-nve-red text-white hover:bg-white hover:text-nve-red;
+}
+
+@utility btn-primary-invert {
+  @apply bg-white border-white text-nve-red hover:bg-nve-red hover:text-white;
+}
