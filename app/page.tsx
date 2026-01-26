@@ -1,9 +1,9 @@
-import { CardCTA } from './components';
+import { CardBenefits } from './components';
 
 export default function Home() {
   return (
     <div>
-      <CardCTA />
+      <CardBenefits />
     </div>
   );
 }
