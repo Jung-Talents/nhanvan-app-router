@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Lexend_Deca } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
-  subsets: ["latin", "vietnamese"],
+  subsets: ["latin"],
   variable: "--font-poppins",
+  weight: ["400", "500", "700"],
+});
+
+const lexendDeca = Lexend_Deca({
+  variable: "--font-lexend",
+  subsets: ["vietnamese"],
   weight: ["400", "500", "700"],
 });
 

@@ -14,10 +14,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
-  --font-san: var(--font-poppins);
+  --font-brand: var(--font-poppins), var(--font-lexend), sans-serif;
 
   --color-nve-red: var(--nve-red);
   --color-nve-beige: var(--nve-beige);
@@ -36,11 +34,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), var(--font-lexend), Arial, Helvetica, sans-serif;
 }
 
 @utility btn {
-  @apply font-medium py-4 px-6 rounded-lg transition duration-400 ease-in-out cursor-pointer border-3;
+  @apply font-medium py-4 px-6 rounded-lg transition duration-400 ease-in-out cursor-pointer border-2;
 }
 
 @utility btn-primary {
