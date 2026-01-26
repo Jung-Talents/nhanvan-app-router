@@ -1,18 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Lexend_Deca } from "next/font/google";
 import "./globals.css";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: ["400", "500", "700"],
-});
-
-const lexendDeca = Lexend_Deca({
-  variable: "--font-lexend",
-  subsets: ["vietnamese"],
-  weight: ["400", "500", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-sans antialiased`}
+        className={`antialiased`}
       >
         {children}
       </body>
