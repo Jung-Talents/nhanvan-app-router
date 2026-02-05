@@ -2,7 +2,14 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const FinalCTA: React.FC = () => {
+interface FinalCTAProps {
+    title: React.ReactNode;
+    highlight?: React.ReactNode;
+    subtitle?: React.ReactNode;
+    description: React.ReactNode;
+}
+
+const FinalCTA: React.FC<FinalCTAProps> = ({ title, highlight, subtitle, description }) => {
     return (
         <>
             <div className="bg-nve-red py-10 lg:py-12.5 px-4 md:px-8 lg:px-30 relative overflow-hidden">
@@ -21,16 +28,16 @@ const FinalCTA: React.FC = () => {
                         </div>
                         <div className="w-full lg:w-139.5 text-left lg:ml-4">
                             <h2 className={`text-4xl/11 text-white font-bold tracking-[-.018em]`}>
-                                Hành trình chinh phục IELTS
+                                {title}
                             </h2>
                             <h2 className={`text-4xl/11 text-yellow-200 font-bold tracking-[-.018em]`}>
-                                bắt đầu ngay hôm nay
+                                {highlight}
                             </h2>
                             <h2 className={`text-3xl/11 text-white font-bold tracking-[-.018em]`}>
-                                Và chạm đến band điểm mơ ước
+                                {subtitle}
                             </h2>
                             <p className="text-2xl font-normal text-gray-100 my-4">
-                                Học theo đúng định dạng đề thi, luyện tập hiệu quả, chấm điểm tức thì và tiết kiệm thời gian, vì chúng tôi hiểu bạn bận rộn.
+                                {description}
                             </p>
                             <Link href="/auth/login">
                                 <button className="btn btn-primary-invert rounded-md text-[16px] w-41 h-15 flex items-center justify-center whitespace-nowrap">
@@ -57,16 +64,16 @@ const FinalCTA: React.FC = () => {
                         </div>
                         <div className="w-full px-4 md:px-6">
                             <h2 className={`text-2xl md:text-3xl/10 text-white font-bold text-left`}>
-                                Hành trình chinh phục IELTS
+                                {title}
                             </h2>
                             <h2 className={`text-2xl md:text-3xl/10 text-yellow-200 font-bold`}>
-                                bắt đầu ngay hôm nay
+                                {highlight}
                             </h2>
                             <h2 className={`text-2xl md:text-3xl/10 text-white font-bold mb-2`}>
-                                Và chạm đến band điểm mơ ước
+                                {subtitle}
                             </h2>
                             <p className="text-[16px] md:text-[18px] text-gray-100 mb-6 md:mb-8">
-                                Học theo đúng định dạng đề thi, luyện tập hiệu quả, chấm điểm tức thì và tiết kiệm thời gian, vì chúng tôi hiểu bạn bận rộn.
+                                {description}
                             </p>
                             <Link href="/auth/login">
                                 <button className="btn btn-primary-invert w-36 h-15 whitespace-nowrap flex items-center justify-center text-[14px]">
