@@ -10,6 +10,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --breakpoint-xs: 480px;
+
+  --color-p-primary: #f5222d;
+  --color-p-neutral-black: #141414;
+  --color-p-neutral-white: #ffffff;
+
+  --color-p-neutral-6: #bfbfbf;
+  --color-p-neutral-7: #8c8c8c;
+
+  --color-p-custom-amber: #eca13a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +34,74 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .fs-heading-1 {
+    @apply text-[2rem]/9 font-semibold;
+
+    @media (min-width: 1024px) {
+      @apply text-5xl/snug font-bold tracking-[-3%];
+    }
+  }
+
+  .fs-heading-2 {
+    @apply text-2xl/none font-semibold tracking-[-1.8%];
+
+    @media (min-width: 1024px) {
+      @apply text-[2rem]/none;
+    }
+  }
+
+  .fs-sub-title {
+    @apply text-base/none;
+
+    @media (min-width: 1024px) {
+      @apply text-2xl/7;
+    }
+  }
+
+  .fs-body {
+    @apply text-sm/none font-light;
+
+    @media (min-width: 1024px) {
+      @apply text-base/[21.2px] font-normal;
+    }
+  }
+
+  .fs-body-2 {
+    @apply text-sm/none font-semibold tracking-[2%];
+
+    @media (min-width: 1024px) {
+      @apply text-base/[19px] tracking-normal;
+    }
+  }
+
+  .fs-button {
+    @apply text-base/8 font-normal tracking-[-.6px];
+
+    @media (min-width: 1024px) {
+      @apply text-base/8;
+    }
+  }
+}
+
+@layer components {
+  .diagonal-split {
+    /* added 2% extra width (from origin left to right) & modify triangle proportion
+    to resolve sub-pixel rounding issue */
+    @apply absolute inset-0 origin-left scale-x-[1.02] [clip-path:polygon(98%_0,110%_100%,0_100%)];
+  }
+
+  .button-hover-pop {
+    @apply cursor-pointer rounded-md border transition-all duration-200 ease-in-out;
+  }
+
+  .button-hover-pop:hover {
+    @apply scale-105 shadow-sm;
+  }
+
+  .button-hover-pop:active {
+    @apply scale-95;
+  }
 }
