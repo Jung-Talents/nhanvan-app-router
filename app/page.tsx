@@ -63,3 +63,5 @@ export default function Home() {
     </div>
   );
 }
+
+import DarkModeToggle from "./components/DarkModeToggle";
