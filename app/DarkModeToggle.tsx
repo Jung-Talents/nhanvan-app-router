@@ -5,17 +5,17 @@ import { useState } from "react";
 export default function DarkModeToggle() {
   const [dark, setDark] = useState(false);
 
+  function toggleTheme() {
+    setDark(!dark);
+    document.documentElement.classList.toggle("dark");
+  }
+
   return (
-    <div
-      className={
-        dark
-          ? "bg-black text-white p-4 rounded"
-          : "bg-white text-black p-4 rounded"
-      }
+    <button
+      onClick={toggleTheme}
+      className="rounded-full bg-black px-5 py-3 text-white transition hover:bg-zinc-700 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
     >
-      <button onClick={() => setDark(!dark)}>
-        {dark ? "Light Mode" : "Dark Mode"}
-      </button>
-    </div>
+      {dark ? "☀️ Light Mode" : "🌙 Dark Mode"}
+    </button>
   );
 }
